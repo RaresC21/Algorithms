@@ -1,3 +1,17 @@
+/*
+Determines the Nth Fibonacci number. Uses exponentiation by squaring.
+Utilizes the following form of determining Fibonacci numbers:
+The matrix
+                        [ F(n+1)    F(n)   ]
+                        [ F(n)      F(n-1) ]
+
+is equal to  A^N where A is the following matrix:
+                             [ 1   1 ]
+                             [ 1   0 ]
+
+Runs in O(LogN) time.
+*/
+
 #include "Include.h"
 
 class Fibonacci {
