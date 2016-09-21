@@ -4,8 +4,6 @@ Uses C++ standard library implementation of priority queue.
 Runs in O(NLogN) time.
 */
 
-#include "Include.h"
-
 class Dijkstra {
 
 #define MAX 1000
@@ -13,7 +11,8 @@ class Dijkstra {
 private:
 
 	lli parent[MAX];
-	vector<vector<int> > path;
+	vector<vector<int> > path; // stores which edges exist.
+	vector<vector<int> > graph; // stores values of edges.
 
 	struct Node {
 		int n;
@@ -27,11 +26,11 @@ private:
 
 public:
 
-	Dijkstra(vector<vector<int> > const& V) : path(V) {
+	Dijkstra(vector<vector<int> > const& P, vector<vector<int> > const& G) : path(P), graph(G) {
 		memset(parent, 0, sizeof(parent));
 	}
 
-	lli dijkstra(lli graph[MAX][MAX], lli s, int t)
+	lli dijkstra(lli s, int t)
 	{
 		bool met[MAX];
 		for (int i = 0; i < MAX; i++) met[i] = false;
