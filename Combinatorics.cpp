@@ -1,4 +1,6 @@
 /*
+Useful exerpt from Mathematics.cpp
+
 We can compute nCr using the usual formula n! / (r! * (n - r)!).
 To do this, we must store our answer mod P to avoid overflow. 
 
