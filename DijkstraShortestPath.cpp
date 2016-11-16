@@ -4,6 +4,8 @@ Uses C++ standard library implementation of priority queue.
 Runs in O(NLogN) time.
 */
 
+#include <bits/stdc++.h>
+
 class Dijkstra {
 
 #define MAX 1000
