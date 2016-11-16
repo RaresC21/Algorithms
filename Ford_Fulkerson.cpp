@@ -3,6 +3,8 @@ Determines the maximum flow through a directed graph from source to sink.
 Implementation of Ford-Fulkerson Algorithm
 */
 
+#include <bits/stdc++.h>
+
 class MaxFlow {
 
 #define INF 1000000000
