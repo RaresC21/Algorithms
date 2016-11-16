@@ -7,6 +7,8 @@ To do this, we must store our answer mod P to avoid overflow.
 We can also compute it with Pascal's triangle.
 */
 
+#include <bits/stdc++.h>
+
 #define MOD 1000000007
 #define MAX 2001
 lli fact[MAX];
