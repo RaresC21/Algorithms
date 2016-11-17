@@ -1,3 +1,8 @@
+/*
+    Solves agrinet from USACO Training Ch. 3
+    Good practice problem to check correctness.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
