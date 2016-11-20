@@ -90,6 +90,11 @@ bool is_ccw(PT p, PT q, PT r) {
   return cross(toVec(p, q), toVec(p, r)) > 0;
 }
 
+// get angle formed by vector 0->a and 0->b
+double angle(PT a, PT b) {
+     return atan2(a.y, a.x) - atan2(b.y, b.x);
+}
+
 double angle(PT a, PT o, PT b) {  // returns angle aob in rad
   vec oa = toVec(o, a), ob = toVec(o, b);
   return acos(dot(oa, ob) / sqrt(norm_sq(oa) * norm_sq(ob)));
