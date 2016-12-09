@@ -2,7 +2,7 @@
 Useful exerpt from Mathematics.cpp
 
 We can compute nCr using the usual formula n! / (r! * (n - r)!).
-To do this, we must store our answer mod P to avoid overflow. 
+To do this, we must store our answer mod P to avoid overflow.
 
 We can also compute it with Pascal's triangle.
 */
@@ -29,7 +29,6 @@ lli modular_inverse_(lli a, lli b) {
 }
 
 lli comb_(lli n, lli r) {
-	calculate_factorial();
 	return (modular_inverse_(fact[n], (fact[r] * fact[n - r]) % MOD)) % MOD;
 }
 

@@ -141,7 +141,6 @@ void calculate_factorial() {
 
 // (r choose n) mod p
 lli combinatorics_(lli n, lli r, lli p) {
-	calculate_factorial();
 	return (modular_inverse_(fact[n], (fact[r] * fact[n - r]) % p, p)) % p;
 }
 
