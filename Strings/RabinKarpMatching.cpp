@@ -31,7 +31,6 @@ vector<int> matching_positions(const string& S, const string& T) {
         match.push_back(N - M + 1);
     }
 
-
     return match;
 }
 

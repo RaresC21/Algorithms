@@ -20,7 +20,6 @@ lli hash_string1(const string& s, lli MOD) {
 // a_0 * x^len  +a_1 * x^(len-1) + ... a_(len-1) * x + a_len
 lli hash_string2(const string& s, lli MOD) {
     lli h = 0;
-    lli a = 1;
     for (int i =  0; i < s.size(); i++) {
         h = ((h * PRIME + s[i]) % MOD) % MOD;
     }
