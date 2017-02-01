@@ -1,6 +1,6 @@
 /*
-Find single source shortest path from source node to all other nodes. 
-Uses C++ standard library implementation of priority queue.  
+Find single source shortest path from source node to all other nodes.
+Uses C++ standard library implementation of priority queue.
 Runs in O(NLogN) time.
 */
 
