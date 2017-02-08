@@ -1,3 +1,5 @@
+// infoarena.com - Cel mai lung subsir comun
+
 #include <bits/stdc++.h>
 using namespace std;
 
