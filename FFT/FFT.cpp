@@ -1,4 +1,7 @@
-
+/*
+    code golf, SWERC 2014.
+    https://open.kattis.com/problems/golfbot
+*/
 #include <iostream>
 #include <algorithm>
 #include <queue>
