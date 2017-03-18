@@ -21,6 +21,18 @@ inline bool cmp (const pair<int, int>& a, const pair<int, int>& b) {
     return a.second < b.second;
 }
 
+void add(int k, int& ans) {
+    if (amnt[arr[k]] == 0)
+        ans++;
+    amnt[arr[k]]++;
+}
+
+void remove(int k, int& ans) {
+    amnt[arr[k]]--;
+    if (amnt[arr[k]] == 0)
+        ans--;
+}
+
 int main() {
 
     std::ios_base::sync_with_stdio(false);
@@ -47,30 +59,21 @@ int main() {
         int a = v[i].first, b = v[i].second;
         while (r < b) {
             r++;
-            if (amnt[arr[r]] == 0) ans++;
-            amnt[arr[r]]++;
+            add(r, ans);
         }
 
         while (l > a) {
             l--;
-            if (amnt[arr[l]] == 0)
-                ans++;
-            amnt[arr[l]]++;
+            add(l, ans);
         }
 
         while (r > b) {
-            amnt[arr[r]]--;
-            if (amnt[arr[r]] == 0) {
-                ans--;
-            }
+            remove(r, ans);
             r--;
         }
 
         while (l < a) {
-            amnt[arr[l]]--;
-            if (amnt[arr[l]] == 0) {
-                ans--;
-            }
+            remove(l, ans);
             l++;
         }
 
