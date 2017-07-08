@@ -180,14 +180,23 @@ bool areIntersect(line l1, line l2, PT &p) {
     return true;
 }
 
-// line segment p-q intersect with line A-B.
-PT lineIntersectSeg(PT p, PT q, PT A,PT B) {
-    double a = B.y - A.y;
-    double b = A.x - B.x;
-    double c = B.x * A.y - A.x * B.y;
-    double u = fabs(a * p.x + b * p.y + c);
-    double v = fabs(a * q.x + b * q.y + c);
-    return PT((p.x * v + q.x * u) / (u+v), (p.y * v + q.y * u) / (u+v));
+// line a-b intersect segment c-d
+PT lineIntersectSeg(PT a, PT b, PT c, PT d) {
+    PT cc = c;
+    PT dd = d;
+    
+    b = b - a;
+    d = c - d;
+    c = c - a;
+    PT ans = a + b * cross(c, d) / cross(b, d);
+
+    if (cc.x > dd.x) swap(cc, dd);
+    if (ans.x < cc.x || ans.x > dd.x) return PT(-1, -1);
+
+    if (cc.y > dd.y) swap(cc, dd);
+    if (ans.y < cc.y || ans.y > dd.y) return PT(-1, -1);
+    
+    return ans;
 }
 
 // determine if line segment from a to b intersects with
